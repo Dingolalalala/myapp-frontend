@@ -8,7 +8,8 @@ function App() {
 
   const handleCalc = async () => {
     const res = await fetch(
-      `https://YOUR_BACKEND_URL.up.railway.app/api/calc?a=${a}&b=${b}&op=${op}`
+      `https://myapp-backend-production-b39e.up.railway.app/api/calc
+`
     );
     const data = await res.json();
     setResult(data.result);

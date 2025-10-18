@@ -8,12 +8,11 @@ function App() {
 
   const handleCalc = async () => {
     const res = await fetch(
-      `https://myapp-backend-production-b39e.up.railway.app/api/calc
-`
-    );
-    const data = await res.json();
-    setResult(data.result);
-  };
+  `https://myapp-backend-production-b39e.up.railway.app/api/calc?a=${a}&b=${b}&op=${op}`
+);
+const data = await res.json();
+setResult(data.result);
+  }
 
   return (
     <div style={{ textAlign: "center", marginTop: "5rem" }}>
